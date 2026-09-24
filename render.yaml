@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: peerconnect-webrtc
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 18.17.0
+      # Optional TURN server config for NAT traversal:
+      # - key: TURN_URL
+      #   value: turn:relay.metered.ca:80
+      # - key: TURN_USERNAME
+      #   value: your_username
+      # - key: TURN_CREDENTIAL
+      #   value: your_password
